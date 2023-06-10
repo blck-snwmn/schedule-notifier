@@ -6,3 +6,6 @@ node_compat = true
 workers_dev = true
 
 browser = { binding = "BROWSER", type = "browser" }
+
+[triggers]
+crons = ["0 0 * * *", "0 3 * * *", "0 6 * * *", "0 9 * * *", "0 12 * * *", "0 15 * * *"]
