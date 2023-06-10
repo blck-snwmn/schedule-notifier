@@ -1,4 +1,5 @@
 # schedule-notifier
+A Cloudflare Worker that navigates to a target URL, captures a screenshot of the page content, and posts the screenshot to Slack.
 
 ## Setting(for Local)
 Please follow these steps to set up the project:
