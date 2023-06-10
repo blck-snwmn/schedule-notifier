@@ -42,6 +42,17 @@ export default {
 		env: Env,
 		ctx: ExecutionContext
 	): Promise<void> {
-
+		const resp = await send(env);
+		console.log(`status: ${resp.status}`)
+		if (!resp.ok) {
+			console.log(`result: ${await resp.text()}`)
+			return
+		}
+		const body = await resp.text()
+		const json = JSON.parse(body) as { ok: boolean }
+		if (!json["ok"]) {
+			console.log(`result: ${body}`)
+			return
+		}
 	}
 };
