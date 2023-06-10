@@ -34,9 +34,22 @@ async function send(env: Env): Promise<Response> {
 }
 
 export default {
-	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		return new Response('success');
-	},
+	// for test
+	// async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+	// 	const resp = await send(env);
+	// 	console.log(`status: ${resp.status}`)
+	// 	if (!resp.ok) {
+	// 		console.log(`result: ${await resp.text()}`)
+	// 		return new Response("failed", { status: resp.status })
+	// 	}
+	// 	const body = await resp.text()
+	// 	const json = JSON.parse(body) as { ok: boolean }
+	// 	if (!json["ok"]) {
+	// 		console.log(`result: ${body}`)
+	// 		return new Response("failed", { status: resp.status })
+	// 	}
+	// 	return new Response("ok")
+	// },
 	async scheduled(
 		controller: ScheduledController,
 		env: Env,
