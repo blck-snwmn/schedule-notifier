@@ -1,0 +1,8 @@
+name = "schedule-notifier"
+main = "src/worker.ts"
+compatibility_date = "2023-06-10"
+
+node_compat = true
+workers_dev = true
+
+browser = { binding = "BROWSER", type = "browser" }
