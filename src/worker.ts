@@ -2,7 +2,6 @@ import puppeteer from "@cloudflare/puppeteer";
 
 export interface Env {
 	TARGET_URL: string
-	WEBHOOK_URL: string
 	SLACK_TOKEN: string
 	BROWSER: puppeteer.BrowserWorker
 }
