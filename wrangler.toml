@@ -4,6 +4,7 @@ compatibility_date = "2023-06-10"
 
 node_compat = true
 workers_dev = false
+logpush = true
 
 browser = { binding = "BROWSER", type = "browser" }
 
