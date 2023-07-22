@@ -7,7 +7,7 @@
     "start": "wrangler dev"
   },
   "devDependencies": {
-    "@cloudflare/puppeteer": "^0.0.2-alpha",
+    "@cloudflare/puppeteer": "^0.0.4",
     "@cloudflare/workers-types": "^4.20230717.0",
     "@types/node": "^20.4.2",
     "typescript": "^5.1.6",

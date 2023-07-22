@@ -1,8 +1,8 @@
 name = "schedule-notifier"
 main = "src/worker.ts"
-compatibility_date = "2023-06-10"
+compatibility_date = "2023-07-21"
 
-node_compat = true
+compatibility_flags = [ "nodejs_compat" ]
 workers_dev = false
 logpush = true
 
