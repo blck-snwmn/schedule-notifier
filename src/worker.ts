@@ -1,3 +1,5 @@
+import { Buffer } from 'node:buffer';
+globalThis.Buffer = Buffer
 import puppeteer from "@cloudflare/puppeteer";
 
 export interface Env {
