@@ -1,4 +1,6 @@
 # schedule-notifier
+[![CodeQL](https://github.com/blck-snwmn/schedule-notifier/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/blck-snwmn/schedule-notifier/actions/workflows/github-code-scanning/codeql)
+
 A Cloudflare Worker that navigates to a target URL, captures a screenshot of the page content, and posts the screenshot to Slack.
 
 ## Setting(for Local)
