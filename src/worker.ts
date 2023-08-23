@@ -1,4 +1,5 @@
 import puppeteer from "@cloudflare/puppeteer";
+import robotsParser from "robots-parser";
 
 export interface Env {
 	TARGET_URL: string
@@ -7,6 +8,21 @@ export interface Env {
 }
 
 async function send(env: Env): Promise<Response> {
+	let isAllowed = true;
+	try {
+		const robotsTextPath = new URL(env.TARGET_URL).origin + "/robots.txt";
+		const response = await fetch(robotsTextPath);
+
+		const robots = robotsParser(robotsTextPath, await response.text());
+		isAllowed = robots.isAllowed(env.TARGET_URL) ?? true; // respect robots.txt!
+	} catch { }
+
+	if (!isAllowed) {
+		console.log("robots.txt disallows crawling");
+		return new Response("robots.txt disallows crawling", { status: 403 });
+	}
+	console.log("robots.txt allows crawling");
+
 	const browser = await puppeteer.launch(env.BROWSER);
 	const page = await browser.newPage();
 	await page.setViewport({ width: 800, height: 2000 });

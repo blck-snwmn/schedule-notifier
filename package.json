@@ -12,5 +12,8 @@
     "@types/node": "^20.5.0",
     "typescript": "^5.1.6",
     "wrangler": "^3.5.1"
+  },
+  "dependencies": {
+    "robots-parser": "^3.0.1"
   }
 }
