@@ -1,0 +1,17 @@
+name: lint and test
+
+on:
+  push:
+
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: Ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: denoland/setup-deno@v1
+      - run: deno lint -c deno.jsonc
+      - run: deno fmt -c deno.jsonc --check
