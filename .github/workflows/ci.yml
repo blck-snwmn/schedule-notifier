@@ -13,5 +13,5 @@ jobs:
         with:
           fetch-depth: 0
       - uses: denoland/setup-deno@v1
-      - run: deno lint -c deno.jsonc
-      - run: deno fmt -c deno.jsonc --check
+      - run: deno lint
+      - run: deno fmt
