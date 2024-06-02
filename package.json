@@ -7,11 +7,11 @@
     "start": "wrangler dev"
   },
   "devDependencies": {
-    "@cloudflare/puppeteer": "^0.0.6",
-    "@cloudflare/workers-types": "^4.20240329.0",
-    "@types/node": "^20.12.2",
-    "typescript": "^5.4.3",
-    "wrangler": "^3.41.0"
+    "@cloudflare/puppeteer": "^0.0.10",
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "@types/node": "^20.13.0",
+    "typescript": "^5.4.5",
+    "wrangler": "^3.58.0"
   },
   "dependencies": {
     "robots-parser": "^3.0.1"
